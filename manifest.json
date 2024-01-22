@@ -1,0 +1,11 @@
+{
+    "name": "Daily Comfort",
+    "version": "1.0.0",
+    "description": "This extension allows you to view a unique quote and look at the weather in a certain area.",
+    "manifest_version": 3,
+    "author": "Mabel Heiner",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Daily Comfort"
+    }
+}

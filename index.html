@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Comfort</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Hello Google Chrome!</h1>
+    <form class="weather-form" id="weather-location" onsubmit="submitForm(event)">
+        <input type="text" name="city" id="city" placeholder="City">
+        <input type="text" name="state" id="state" placeholder="State" >
+        <button>Get Weather</button>
+    </form>
+    <div id="weather-display">
+        
+    </div>
 </body>
 </html>
