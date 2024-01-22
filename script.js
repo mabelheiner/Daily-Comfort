@@ -6,7 +6,11 @@
 const weather_display = document.querySelector('#weather-display')
 
 function displayResults(data) {
-    weather_display.innerHTML = `<h2>Current Temp: ${data.main.temp}&deg`
+    weather_display.innerHTML = `<h2>Current Temp: ${data.main.temp}&deg</h2>
+    <figure>
+        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png" alt="${data.weather[0].description}"
+        <figcaption>${data.weather[0].description}</figcaption>
+    </figure>`;
 }
 
 async function fetchData(city, state) {
@@ -27,9 +31,9 @@ async function fetchData(city, state) {
     }
 }
 
-function submitForm(event) {
+document.getElementById('weather-location').addEventListener('submit', (event) => {
     event.preventDefault();
     let city = document.querySelector('#city').value;
     let state = document.querySelector('#state').value;
     fetchData(city, state);
-}
+});
